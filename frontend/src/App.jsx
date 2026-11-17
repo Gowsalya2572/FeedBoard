@@ -1,14 +1,20 @@
+
 import React from 'react'
+import { Route, Routes } from 'react-router-dom'
+import PublicLayout from './layout/PublicLayout'
+import LandingPage from './pages/LandingPage'
 
 const App = () => {
   return (
-    <div>
-       <h1 className="text-3xl font-heading  font-bold underline">
-         Hello world!
-       </h1>
-    </div>
+    <Routes>
+      <Route element={<PublicLayout/>}>
+       <Route path='/' element={<LandingPage />}/>
+      </Route>
+    </Routes>
   )
 }
 
 export default App
+
+
 
