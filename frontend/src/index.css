@@ -1,0 +1,73 @@
+@import "tailwindcss";
+
+
+@import "tailwindcss";
+
+@theme {
+  /* FeedBoard Colors */
+  --color-deep-teal: #064E4B;
+  --color-primary-teal: #087F8C;
+  --color-mint: #2DD4BF;
+  --color-pale-mint: #CCFBF1;
+  --color-app-bg: #F0FDFA;
+  --color-white: #FFFFFF;
+  --color-app-text: #12343B;
+
+  /* FeedBoard Typography */
+  --font-heading: "Plus Jakarta Sans", sans-serif;
+  --font-body: "Inter", sans-serif;
+}
+
+/* Global styles */
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  min-width: 320px;
+  background-color: var(--color-app-bg);
+  color: var(--color-app-text);
+  font-family: var(--font-body);
+  -webkit-font-smoothing: antialiased;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: var(--font-heading);
+}
+
+button,
+input,
+textarea,
+select {
+  font: inherit;
+}
+
+button {
+  cursor: pointer;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    scroll-behavior: auto !important;
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}
