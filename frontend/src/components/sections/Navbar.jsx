@@ -22,7 +22,7 @@ function Navbar() {
 
   const handleGetStarted = () => {
     closeMenu();
-    navigate("/signup");
+    navigate("/register");
   };
 
   return (
@@ -50,10 +50,10 @@ function Navbar() {
         {/* Desktop Actions */}
         <div className="hidden shrink-0 items-center gap-4 lg:flex">
           <Link
-            to="/signin"
+            to="/login"
             className="whitespace-nowrap text-sm font-semibold text-app-text transition hover:text-primary-teal"
           >
-            Sign In
+            Login
           </Link>
 
           <Button
@@ -95,11 +95,11 @@ function Navbar() {
 
             <div className="mt-3 flex flex-col gap-3 border-t border-slate-100 pt-4">
               <Link
-                to="/signin"
+                to="/login"
                 onClick={closeMenu}
                 className="rounded-lg px-3 py-2.5 text-sm font-semibold text-deep-teal transition hover:bg-pale-mint"
               >
-                Sign In
+                Login
               </Link>
 
               <Button

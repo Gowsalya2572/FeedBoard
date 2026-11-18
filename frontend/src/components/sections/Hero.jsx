@@ -178,7 +178,7 @@ function Hero() {
           </p>
 
           <div className="mt-6 flex flex-col justify-center gap-3 sm:mt-8 sm:flex-row lg:justify-start">
-            <Link to="/signup" className="w-full sm:w-auto">
+            <Link to="/register" className="w-full sm:w-auto">
               <Button size="lg"  icon={ArrowRight}>
                 Get Started – Free
               </Button>
