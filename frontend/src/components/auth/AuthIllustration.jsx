@@ -4,7 +4,7 @@ import image from '../../assets/illust.png'
 
 function AuthIllustration() {
   return (
-    <section className="flex h-full min-h-[650px] flex-col justify-between overflow-hidden bg-deep-teal p-8 text-white xl:p-12">
+    <section className="flex h-full min-h-[650px] flex-col justify-between gap-3 overflow-hidden bg-deep-teal p-8 text-white xl:p-12">
 
       {/* Logo */}
       <div>
@@ -13,7 +13,7 @@ function AuthIllustration() {
 
       {/* Main content */}
       <div className="mx-auto w-full max-w-lg">
-        <h1 className="font-heading text-4xl font-extrabold leading-tight xl:text-5xl">
+        <h1 className="font-heading text-3xl font-extrabold leading-tight lg:text-4xl">
           Every Great Idea
           <br />
           Starts With
