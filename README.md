@@ -5,6 +5,10 @@
 
 FeedBoard is a modern, responsive customer feedback platform that helps businesses collect feature requests, prioritize product improvements, and understand customer needs through community voting.
 
+## 🌐 Live Demo
+
+https://feed-board-project.vercel.app
+
 ## 🚀 Features
 
 - Responsive SaaS landing page.
