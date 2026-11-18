@@ -76,7 +76,7 @@ function Pricing() {
                 ))}
               </ul>
 
-              <Link to="/signup" className="mt-8 block">
+              <Link to="/register" className="mt-8 block">
                 <Button
                   fullWidth
                   size="lg"

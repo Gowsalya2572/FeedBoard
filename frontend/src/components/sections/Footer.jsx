@@ -1,6 +1,8 @@
 
 import { Link } from "react-router-dom";
 import Logo from "../Logo";
+import { ArrowUp } from "lucide-react";
+import { useEffect, useState } from "react";
 
 const footerLinks = [
   { label: "Home", href: "#home" },
@@ -17,6 +19,25 @@ const socialLinks = [
 ];
 
 function Footer() {
+   const [showButton, setShowButton] = useState(false);
+
+    useEffect(() => {
+    const handleScroll = () => {
+      setShowButton(window.scrollY > window.innerHeight * 0.7);
+    };
+
+    window.addEventListener("scroll", handleScroll);
+    handleScroll();
+
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, []);
+
+  const scrollToTop = () => {
+    window.scrollTo({
+      top: 0,
+      behavior: "smooth",
+    });
+  };
   return (
     <footer className="bg-deep-teal px-5 py-12 text-white lg:px-8">
       <div className="mx-auto max-w-7xl">
@@ -80,6 +101,16 @@ function Footer() {
           <p>Made for better products and happier customers.</p>
         </div>
 
+        {showButton && (
+        <button
+          type="button"
+          onClick={scrollToTop}
+          aria-label="Back to top"
+          className="fixed bottom-6 right-6 z-50 flex h-11 w-11 items-center justify-center rounded-xl bg-primary-teal text-white shadow-lg shadow-teal-900/20 transition-all duration-300 hover:-translate-y-1 hover:bg-deep-teal focus:outline-none focus:ring-2 focus:ring-primary-teal focus:ring-offset-2"
+        >
+          <ArrowUp size={21} />
+        </button>
+      )}
       </div>
     </footer>
   );
